@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Product</title>
+</head>
+<body>
+    <table th:each="product : ${products}">
+       <tr>
+           <td>Name</td>
+           <td ><p th:text="${product.getName()}"></p></td>
+       </tr>
+        <tr>
+            <td>Price</td>
+            <td ><p th:text="${product.getPrice()}"></p></td>
+        </tr>
+    </table>
+    <a th:href="@{/listProduct}">Back to list</a>
+</body>
+</html>
